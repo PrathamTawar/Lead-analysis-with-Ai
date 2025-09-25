@@ -4,6 +4,12 @@ A full-stack web application that accepts Product/Offer information and a CSV of
 
 ---
 
+# Live Deployed Links
+1. Frontend- https://lead-analysis-with-ai-budx.vercel.app/
+2. Backend - https://lead-analysis-with-ai.onrender.com/
+
+---
+
 ## **Table of Contents**
 - [Features](#features)
 - [Tech Stack](#tech-stack)
