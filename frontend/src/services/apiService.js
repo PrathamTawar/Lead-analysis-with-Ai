@@ -78,8 +78,7 @@ api.interceptors.response.use(
         // Refresh failed, clear tokens and redirect
         removeToken();
         toast.error('Session expired. Please login again.');
-        window.location.href = '/login';
-        
+        window.location.href = '/auth';
         return Promise.reject(refreshError);
       }
     }
@@ -115,7 +114,6 @@ const apiService = {
         // Start auto-refresh for new login
         this.startAutoRefresh();
         toast.success('Login successful!');
-        window.location.href = '/dashboard';
       }
       
       return response.data;
@@ -141,7 +139,6 @@ const apiService = {
         // Start auto-refresh for new signup
         this.startAutoRefresh();
         toast.success('Account created successfully!');
-        window.location.href = '/dashboard';
       }
       
       return response.data;
@@ -179,7 +176,6 @@ const apiService = {
     this.stopAutoRefresh();
     removeToken();
     toast.success('Logged out successfully');
-    window.location.href = '/auth';
   },
 
   /**
@@ -300,7 +296,6 @@ const apiService = {
         console.log('❌ Auto-refresh failed:', error);
         this.stopAutoRefresh();
         removeToken();
-        window.location.href = '/auth';
       }
     }, 50 * 60 * 1000); // 50 minutes
   },
