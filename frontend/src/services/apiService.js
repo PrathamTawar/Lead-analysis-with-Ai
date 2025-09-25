@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-hot-toast';
 
 // API Base URL - change this to your Django backend URL
-const API_BASE_URL ='http://localhost:8000/';
+const API_BASE_URL ='https://lead-analysis-with-ai.onrender.com/';
 
 // Create axios instance
 const api = axios.create({

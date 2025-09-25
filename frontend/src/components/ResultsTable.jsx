@@ -1,8 +1,8 @@
 import React from 'react';
 import { Filter, Download, Search, SortAsc } from 'lucide-react';
-import Button from './ui/Button';
-import Card from './ui/Card';
-import Badge from './ui/Badge';
+import Button from './Ui/Button';
+import Card from './Ui/Card';
+import Badge from './Ui/Badge';
 
 const ResultsTable = ({ results, filterIntent, onFilterChange, showFilters }) => {
   const exportToCsv = () => {

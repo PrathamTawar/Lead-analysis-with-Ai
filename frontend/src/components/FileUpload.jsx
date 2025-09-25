@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Upload, CheckCircle, FileSpreadsheet, AlertTriangle } from 'lucide-react';
-import Button from './ui/Button';
-import Card from './ui/Card';
+import Button from './Ui/Button';
+import Card from './Ui/Card';
 
 const FileUpload = ({ onFileUpload, uploadProgress, disabled, isCompleted }) => {
   const [dragActive, setDragActive] = useState(false);

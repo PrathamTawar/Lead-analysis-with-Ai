@@ -29,7 +29,6 @@ const OfferForm = ({ offers, onSubmit, setOffers, onStartAI, isProcessing }) => 
     };
     try {
       await onSubmit(offerToSave);
-      setOffers([...offers, currentOffer]);
       setCurrentOffer({
         name: "",
         value_props: "",

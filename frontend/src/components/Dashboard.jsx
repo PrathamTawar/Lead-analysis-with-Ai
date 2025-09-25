@@ -50,6 +50,8 @@ const Dashboard = () => {
     try {
       const res = await apiService.postOffer(offer);
       setOfferId(res.order_id || res.id);
+      toast.success('Offer saved successfully!');
+      setOffers((prevOffers) => [...prevOffers, res]);
     } catch (err) {
       console.error(err);
     }
@@ -58,9 +60,12 @@ const Dashboard = () => {
   const handleFileUpload = async (file) => {
     try {
       setUploadProgress(0);
-      await apiService.uploadCsvFile(file, (progress) =>
+      const res = await apiService.uploadCsvFile(file, (progress) =>
         setUploadProgress(progress)
       );
+      console.log(res)
+      res.leads.map((lead)=>setLeads((prevLeads)=>[...prevLeads,lead]))
+      toast.success('File uploaded successfully!');
     } catch (err) {
       console.error(err);
       setUploadProgress(0);
