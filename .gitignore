@@ -1,0 +1,22 @@
+# Ignore IDE files
+*.idea
+*.iml
+*.ipynb_checkpoints
+*.pycharm
+*.swp
+*.vs
+*.vscode
+*.vscode.xml
+
+# Ignore Django migrations
+migrations/__pycache__/
+local_settings.py
+
+# Ignore local sqlite database
+db.sqlite3
+
+# Ignore virtualenv
+venv/
+env/
+.env
+.venv/
